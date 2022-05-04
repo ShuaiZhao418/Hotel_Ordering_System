@@ -1,0 +1,63 @@
+.recommand {
+    background-color: #d8eff4;
+    padding: 1rem;
+}
+
+.recommand__text {
+    font-size: x-large;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+
+/* loader */
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #51b0ef; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* recommand card */
+.recommand__hotels {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+ 
+}
+
+.recommand__card {
+    display: flex;
+    flex-direction: column;
+
+    height: 12rem;
+    width: 15rem;
+    margin: 1rem;
+
+    box-shadow:2px 2px 5px #000;
+    background-color: white;
+}
+
+.recommand__card__cover-img {
+    height: 8.5rem;
+    width: 15rem;
+}
+
+.recommand__card__content {
+    text-align: center;
+}
+
+.recommand__hotel__name {
+    list-style: none;
+}
+
+

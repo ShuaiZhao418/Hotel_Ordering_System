@@ -1,0 +1,20 @@
+.privacy {
+    margin: 1rem;
+    color:rgb(113, 110, 110);
+}
+
+p {
+    font-size: medium;
+    font-weight: 500;
+    margin: 1rem;
+}
+
+.privacy__list{
+    padding: 1rem;
+}
+
+li {
+    font-size: medium;
+    font-weight: 500;
+    list-style: none;
+}

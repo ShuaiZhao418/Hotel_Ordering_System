@@ -1,0 +1,191 @@
+/* css for title and menu */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: sans-serif;
+    background-color: #f2feff;
+}
+
+.body {
+    z-index: 9;
+}
+
+.title{
+    justify-content: left;
+}
+
+.title .logout{
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.title .logout .logout__button{
+    font-size: 1rem;
+    background-color: #3bb3f8;
+    border-radius: 3rem;
+    border: none;
+    height: 3.5rem;
+    width: 4.5rem;
+    
+    margin-bottom: 0.1rem;
+}
+
+.logout__button a{
+    color: red;
+    text-decoration: none;
+}
+
+.skiplink__recommand {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: 700;   
+    padding: 1rem;
+    position: absolute;
+    text-decoration: none;
+    transform: translateX(-100%);
+}
+
+.skiplink__recommand:focus {
+    transform: translateY(-110%);
+}
+
+/* ---- set the header-menu part of the page ---- */
+.menu {
+    /* attribute setting pattern */
+    /* position / display */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    /* box setting */
+    padding: 0.5rem 0;
+    /* hide the list node */
+    list-style-type: none;
+
+    /* color */
+    background-color: #43afa0;
+}
+
+.menu__subheader {
+    border: 0;
+    padding-left: 0.5rem;
+
+    font-size: inherit;
+    /* set the background color of subheader to be transparent,  */
+    background-color: transparent;
+
+    color: white;
+}
+
+.menu__item:focus-within .submenu,
+.menu__item:hover .submenu {
+    /* set the transform effect，rotate vertical */
+
+    display: block;
+    transform: rotateX(0deg);
+}
+
+.submenu {
+    /* hide the submenu part */
+    z-index: 10;
+    position: absolute;
+
+    border-top: 0;
+    margin-top: 0.5rem;
+
+    transition: transform 300ms;
+    transform: rotateX(90deg);
+    /* rotate from the top, not in the middle */
+    transform-origin: top;
+
+    list-style-type: none;
+    /* hide the blank part in the submenu*/
+    overflow: hidden;
+
+    background-color: rgb(85, 79, 79);
+}
+
+.submenu__item {
+    color:#fefefe;
+    background-color: #378b80;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.submenu__item:hover {
+    /* show the red line when mouse on the List-item */
+    border-bottom: 2px solid #f54646;
+    background-color: rgb(81, 93, 128);
+}
+
+.submenu__item a {
+    color:#fefefe;
+    text-decoration: none;
+}
+
+/* footer part */
+.footer__introduction ul{
+    display: flex;
+    flex-direction: row;
+
+    margin: 1rem;
+    border-bottom: 0.5px solid black;
+}
+
+.footer__introduction li{
+    font-size: 1.1rem;
+    padding: 1rem;
+}
+
+.footer__others ul{
+    display: flex;
+    flex-direction: row;
+
+    margin: 1rem;
+}
+
+.footer__others li{
+    font-size: 1rem;
+    padding-left: 1rem;
+    color: #373535;
+}
+
+.footer__clarification {
+    margin: 2rem;
+}
+
+@media (max-width: 360px) {
+    /* adjust the button's position when it is < 360px */
+    .title .logout{
+        text-align: left;
+    }
+    
+    .menu {
+        flex-direction: column;
+    }
+    .menu__item {
+        height: 3.2rem;
+    }
+
+    .menu__item button{
+        padding: 1rem;
+    }
+
+    .show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__introduction ul{
+        flex-direction: column;
+    }
+
+    .footer__others ul{
+        flex-direction: column;
+    }
+}
